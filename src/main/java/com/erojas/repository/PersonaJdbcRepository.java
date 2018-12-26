@@ -10,12 +10,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.erojas.config.Conexion;
 import com.erojas.model.Persona;
 
 @Repository("personaJdbcRepository")
 @Qualifier("jdbc")
+@Transactional
 public class PersonaJdbcRepository implements Crud {
 
 	private Connection cn;

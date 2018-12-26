@@ -3,19 +3,17 @@ package com.erojas.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.erojas.model.Persona;
-import com.erojas.repository.PersonaJdbcDaoSupportRepository;
+import com.erojas.repository.PersonaSessionFactoryRepository;
 import com.erojas.service.PersonaService;
 
-@Service("personaJdbcDaoSupportServiceImpl")
-public class PersonaJdbcDaoSupportServiceImpl implements PersonaService{
+@Service("personaSessionFactoryServiceImpl")
+public class PersonaSessionFactoryServiceImpl implements PersonaService{
 	@Autowired
-	private PersonaJdbcDaoSupportRepository dao;
+	private PersonaSessionFactoryRepository dao;
 	
-
 	@Override
 	public List<Persona> findAll() {
 		

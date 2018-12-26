@@ -9,6 +9,7 @@
 
 	<properties>
 		<springframework.version>4.3.10.RELEASE</springframework.version>
+		<hibernate.version>4.3.6.Final</hibernate.version>
 	</properties>
 
 	<dependencies>
@@ -38,6 +39,19 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
+		<!-- SPRING ORM -->
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <!-- HIBERNATE -->
+	
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>

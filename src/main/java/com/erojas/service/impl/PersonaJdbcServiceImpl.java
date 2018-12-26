@@ -2,6 +2,7 @@ package com.erojas.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.erojas.config.Conexion;
@@ -9,14 +10,12 @@ import com.erojas.model.Persona;
 import com.erojas.repository.PersonaJdbcRepository;
 import com.erojas.service.PersonaService;
 
-@Service
+@Service("personaJdbcServiceImpl")
 public class PersonaJdbcServiceImpl  implements PersonaService{
-
+	@Autowired
 	private PersonaJdbcRepository personaJdbcRepository;
 	
-	public PersonaJdbcServiceImpl () {
-		 this.personaJdbcRepository= new PersonaJdbcRepository();
-	}
+	
 	
 	@Override
 	public List<Persona> findAll() {

@@ -7,19 +7,23 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import com.erojas.config.Conexion;
 import com.erojas.model.Persona;
 
-@Repository("jdbcRepository")
+@Repository("personaJdbcRepository")
+@Qualifier("jdbc")
 public class PersonaJdbcRepository implements Crud {
 
 	private Connection cn;
-
-	public PersonaJdbcRepository() {
-		cn = new Conexion().conectar();
+	
+	public PersonaJdbcRepository(Conexion conexion) {
+		cn=conexion.conectar();
 	}
+
 
 	@Override
 	public List<Persona> findAll() {

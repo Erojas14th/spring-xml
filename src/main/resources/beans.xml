@@ -8,9 +8,8 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
 
 	
-	 
+	
 	<import resource="classpath:Jdbc.xml" />
 	<import resource="classpath:JdbcDaoSupport.xml" />
 	<import resource="classpath:SessionFactory.xml" />  
-	
 </beans>

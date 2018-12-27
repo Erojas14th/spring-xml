@@ -13,6 +13,7 @@ import com.erojas.service.PersonaService;
 @Service("personaJdbcDaoSupportServiceImpl")
 public class PersonaJdbcDaoSupportServiceImpl implements PersonaService{
 	@Autowired
+	@Qualifier("jdbcDaoSupport")
 	private PersonaJdbcDaoSupportRepository dao;
 	
 

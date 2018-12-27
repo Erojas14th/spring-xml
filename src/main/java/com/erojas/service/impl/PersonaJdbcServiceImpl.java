@@ -3,6 +3,7 @@ package com.erojas.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.erojas.config.Conexion;
@@ -13,6 +14,7 @@ import com.erojas.service.PersonaService;
 @Service("personaJdbcServiceImpl")
 public class PersonaJdbcServiceImpl  implements PersonaService{
 	@Autowired
+	@Qualifier("jdbc")
 	private PersonaJdbcRepository personaJdbcRepository;
 	
 	

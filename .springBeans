@@ -8,6 +8,9 @@
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
 		<config>src/main/resources/beans.xml</config>
+		<config>src/main/resources/JdbcDaoSupport.xml</config>
+		<config>src/main/resources/SessionFactory.xml</config>
+		<config>src/main/resources/Jdbc.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

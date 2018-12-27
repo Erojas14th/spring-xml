@@ -7,7 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.erojas.model.Persona;
 import com.erojas.service.PersonaService;
-import com.erojas.service.impl.PersonaSessionFactoryServiceImpl;
+import com.erojas.service.impl.PersonaJdbcServiceImpl;
 
 public class App {
 	
@@ -16,7 +16,7 @@ public class App {
 		// TODO Auto-generated method stub
 		ApplicationContext ap = new ClassPathXmlApplicationContext("beans.xml");
 		//Crud crud =ap.getBean("personaJdbcRepository",PersonaJdbcRepository.class);
-		PersonaService crud =ap.getBean("personaSessionFactoryServiceImpl",PersonaSessionFactoryServiceImpl.class);
+		PersonaService crud =ap.getBean("personaJdbcServiceImpl",PersonaJdbcServiceImpl.class);
 		List<Persona> lista = crud.findAll();
 		lista.stream().forEach(p -> System.out.println(p.getNombre()));
 	}
